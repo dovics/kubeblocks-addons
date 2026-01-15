@@ -16,4 +16,4 @@ spec:
     - name: 2.4.4
       serviceVersion: 2.4.4
       images:
-        proxysql: {{ .Values.image.registry | default "docker.io" }}/apecloud/proxysql:2.4.4
+        proxysql: {{ .Values.image.registry | default "docker.io" }}/{{ .Values.image.proxysql.repository }}:{{ .Values.image.proxysql.tag | default "2.4.4" }}

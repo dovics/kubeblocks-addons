@@ -10,10 +10,17 @@ image:
   # example for mysql 8.0
   #tag: 8.0.33
   tag: 5.7.44
+  auditLog:
+    # if the value of image.auditLog.registry is not specified using `--set`, it will be set to the value of 'image.registry' by default
+    registry: ""
+    repository: apecloud/mysql_audit_log
   xtraBackup:
     # if the value of image.xtraBackup.registry is not specified using `--set`, it will be set to the value of 'image.registry' by default
     registry: ""
     repository: apecloud/percona-xtrabackup
+  jemalloc:
+    repository: apecloud/jemalloc
+    tag: 5.3.0
   syncer:
     repository: apecloud/syncer
     tag: 0.6.5
@@ -24,6 +31,9 @@ image:
   walgImage:
     repository: apecloud/wal-g-mysql
     tag: 3.0.0-ubuntu
+  proxysql:
+    repository: apecloud/proxysql
+    tag: ""
 
 ## MySQL Cluster parameters
 cluster:
